@@ -1,0 +1,1025 @@
+<html lang="pt-br"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Red Ventures Brasil</title>
+    <link rel="icon" href="https://redventures.com.br/favicon.png">
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <meta name="next-head-count" content="26">
+    <link rel="preload" href="https://redventures.com.br/_next/static/css/21b1a9b968071199.css" as="style">
+    <link rel="stylesheet" href="https://redventures.com.br/_next/static/css/21b1a9b968071199.css" data-n-g="">
+    <link rel="preload" href="https://redventures.com.br/_next/static/css/82b0cccf5ae87aa8.css" as="style">
+    <link rel="stylesheet" href="https://redventures.com.br/_next/static/css/82b0cccf5ae87aa8.css" data-n-p=""><noscript data-n-css=""></noscript>
+  
+    <style type="text/css">
+        .marquee-container {
+            overflow-x: hidden !important;
+            display: flex !important;
+            flex-direction: row !important;
+            position: relative;
+            width: 100%;
+        }
+.marquee-container:hover div {
+animation-play-state: var(--pause-on-hover);
+}
+.marquee-container:active div {
+animation-play-state: var(--pause-on-click);
+}
+
+.overlay {
+position: absolute;
+width: 100%;
+height: 100%;
+}
+.overlay::before, .overlay::after {
+background: linear-gradient(to right, var(--gradient-color));
+content: "";
+height: 100%;
+position: absolute;
+width: var(--gradient-width);
+z-index: 2;
+}
+.overlay::after {
+right: 0;
+top: 0;
+transform: rotateZ(180deg);
+}
+.overlay::before {
+left: 0;
+top: 0;
+}
+
+.marquee {
+flex: 0 0 auto;
+min-width: 100%;
+z-index: 1;
+display: flex;
+flex-direction: row;
+align-items: center;
+animation: scroll var(--duration) linear var(--delay) var(--iteration-count);
+animation-play-state: var(--play);
+animation-delay: var(--delay);
+animation-direction: var(--direction);
+}
+@keyframes scroll {
+0% {
+transform: translateX(0%);
+}
+100% {
+transform: translateX(-100%);
+}
+}</style>
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.9.1.min.js"></script>
+
+<script type="text/javascript">
+
+    window.addEventListener("load", mediaSizer);
+    //window.addEventListener("resize", mediaSizer);
+    // Listeners that will react when the page first loads or is resized.
+    // If any of these events take place the mediaSizer() function executes.
+
+    var vizList = [
+
+    "https://demo.tableau.com/t/LuizOliveira/views/resultado_16831492643350/AcompanhamentodeResultado",
+    "https://demo.tableau.com/t/LuizOliveira/views/HUMANRESOURCES-HRExpensesDashboardBrasil_16831492643550/Cockpit",
+    "https://demo.tableau.com/t/LuizOliveira/views/PrevistoxRealizado_16831492642380/AnliseMensal",
+    "https://demo.tableau.com/t/LuizOliveira/views/FinanasCorporativas-PainelDemonstrativoFinanceiro_16831492659090/Cockpit-Finance",
+    "https://demo.tableau.com/t/LuizOliveira/views/AnlisedeSupermercados_16831492650940/BufferCalculations",
+    "https://demo.tableau.com/t/LuizOliveira/views/Mapwize-ShoppingMallRevenue_16831492641980/ShoppingMallRevenue",
+        "https://public.tableau.com/views/Howhastheworldchangedsince1962/WorldIndicators?:language=en-US&:display_count=n&:origin=viz_share_link",
+        "https://public.tableau.com/views/GoogleAdsDashboard/ExecutiveSummary?:language=en-US&:toolbar=n&:display_count=n&:origin=viz_share_link",
+        "https://public.tableau.com/views/TwitterAdsDashboard/ExecutiveSummary?:language=en-US&:toolbar=n&:display_count=n&:origin=viz_share_link",
+        "https://public.tableau.com/views/FacebookAdsDashboard_15566377846980/ExecutiveSummary?:language=en-US&:toolbar=n&:display_count=n&:origin=viz_share_link",
+        "https://public.tableau.com/views/NPS-NetPromoterScoreDashboard/ExecutiveSummary?:language=en-US&:display_count=n&:origin=viz_share_link",
+        
+
+        "https://demo.tableau.com/t/LuizOliveira/views/1-XX-DesigningEffectiveDashboards_16609286511730/Intro",
+        "https://demo.tableau.com/t/LuizOliveira/views/Embedded_Analytics_DemoPT-BR3/Introduo"
+        
+
+
+    ];
+    // Array of Tableau Server URLs for dashboard or sheet navigation.
+
+    var viz,
+        vizLen = vizList.length,
+        vizCount = 0,
+        devType,
+        vHideTabs = true,
+            vHideToolbar = true;
+    var options = {
+        device: devType,
+    };
+
+
+    function mediaSizer() {
+        // Determines the correct viz layout according to screen sizes.
+        if (window.matchMedia("(max-width: 480px)").matches) {
+            //alert("I am a phone layout!");
+            devType = 'phone';
+            vWidth = 450;
+            vHeight = 2000;
+            //options.device = 'phone';
+        } else if (window.matchMedia("(max-width: 980px)").matches) {
+            //alert("I am a tablet layout!");
+            devType = 'tablet';
+            vWidth = 980;
+            //options.device = 'tablet';
+        } else {
+            //alert("I am a desktop layout!");
+            devType = 'desktop';
+            vWidth = 1666;
+            vHeight = 800;
+            //options.device = 'desktop';
+        }
+        console.log("devtype: " + devType)
+        console.log("launch0")
+        launchViz(0);
+        console.log("launch1")
+        vHeight = 800;
+        launchViz(1);
+        vHeight = 1000;
+        console.log("launch2")
+      
+        launchViz(2);
+        console.log("launch3")
+         launchViz(3);
+        launchViz(4);
+        vHideToolbar=true;
+            vHideTabs= true;
+        launchViz(5);
+        launchViz(6);
+        
+        
+        vHideToolbar=false;
+            vHideTabs= false;
+        launchViz(7);
+        launchViz(8);
+        launchViz(9);
+    
+        launchViz(10);
+        vHeight = 1000;
+        launchViz(11);
+        launchViz(12);
+ 
+
+        // Launches the viz again with the new sizing at the current index of vizList.
+    }
+
+
+    function launchViz(vizNav) {
+        // JS object targeting a div in the html document. (vizNav) will pass navigation values to move back and forth across vizList.
+        console.log("vizContainer" + vizNav)
+        console.log("devtype: " + devType)
+        var vizDiv = document.getElementById("vizContainer" + vizNav),
+            // Will embed the visualization on a div with id="VizContainer"
+            options = {
+                device: devType,
+                width: vWidth,
+                height: vHeight,
+                hideTabs: vHideTabs,
+                hideToolbar: vHideToolbar,
+                onFirstInteractive: function () {
+                    listenToMarksSelection();
+                }
+            };
+
+
+        var vizURL = vizList[vizNav];
+        // Dynamic URL returning the string from vizList at index = vizNav (viz to be displayed).
+
+        try {
+            // Initializes the viz from the array with desired options. 
+            viz = new tableau.Viz(vizDiv, vizURL, options);
+            if (!viz) throw 'viz not initialized'
+        }
+        catch (err) {
+            alert(err);
+        }
+        finally {
+            console.log('whatever')
+            console.count('initViz')
+        }
+
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <div id="__next">
+        <header class="header_headerWrapper__MR3Rq false">
+            <div class="container_container__zL0Q7 undefined">
+                <div class="header_content__X_TMV"><img alt="Logo RVBR em branco" href="https://redventures.com.br/"
+                        srcset="https://redventures.com.br/white-logo.svg 1x, https://redventures.com.br/white-logo.svg 2x" src="https://redventures.com.br/white-logo.svg" width="67" height="24"
+                        decoding="async" data-nimg="future" class="header_logo__ycR_7" loading="lazy"
+                        style="color:transparent">
+                    <div class="header_buttonsWrapper__ejflp"><button
+                            class="button_button__iliVb button_primary__yZ1Jn header_desktopButton__d6GYc">contato</button><button
+                            aria-label="Menu" class="header_menu__B_BfY header_menuWhite__4_5aE">
+                            <div></div>
+                        </button></div>
+                </div>
+            </div>
+            <div class="content_content__8UXFO ">
+                <div class="container_container__zL0Q7 undefined">
+                    <div class="content_header__0Wq1J"><img alt="Logo RVBR"
+                            srcset="https://redventures.com.br/logo-v-preto.svg 1x, https://redventures.com.br/logo-v-preto.svg 2x" src="https://redventures.com.br/logo-v-preto.svg" width="67"
+                            height="24" decoding="async" data-nimg="future" loading="lazy" style="color:transparent">
+                        <div class="content_buttonsWrapper__GnDjp"><button
+                                class="button_button__iliVb button_primary__yZ1Jn content_desktopButton__Z7WYg">Contato</button><button
+                                class="content_closeBtn__oeQNQ"><img alt="Ícone de fechar"
+                                    srcset="https://redventures.com.br/icons/close.svg 1x, https://redventures.com.br/icons/close.svg 2x" src="https://redventures.com.br/icons/close.svg" width="20"
+                                    height="20" decoding="async" data-nimg="future" class="content_closeIcon__suG_w"
+                                    loading="lazy" style="color:transparent"></button></div>
+                    </div>
+                    <div class="content_contentWrapper__ePZ7D">
+                        <nav class="content_menu__1tPwc"><a class="content_menuLink__ZLoFI" href="https://redventures.com.br/o-que-fazemos">O que
+                                fazemos</a><a class="content_menuLink__ZLoFI" href="https://redventures.com.br/quem-somos">Quem somos</a><a
+                                class="content_menuLink__ZLoFI" href="https://redventures.com.br/carreira">Carreira</a><button
+                                class="button_button__iliVb button_primary__yZ1Jn content_mobileButton__tAv9n">Contato</button>
+                        </nav><span class="content_divider__lQ5IZ"></span>
+                        <div><a target="_blank" rel="noreferrer" href="mailto:contato@redventures.com"
+                                class="content_contactLink__TdvLL">
+                                <div class="content_iconWrapper__wYCGv"><img alt="Ícone de email"
+                                        srcset="https://redventures.com.br/icons/mail.svg 1x, https://redventures.com.br/icons/mail.svg 2x" src="https://redventures.com.br/icons/mail.svg" width="22"
+                                        height="20" decoding="async" data-nimg="future" loading="lazy"
+                                        style="color:transparent"></div><span
+                                    class="content_contactText__tDBi9">contato@redventures.com</span>
+                            </a><a target="_blank" rel="noreferrer"
+                                href="https://linkedin.com/company/redventuresbrasil"
+                                class="content_contactLink__TdvLL">
+                                <div class="content_iconWrapper__wYCGv"><img alt="Ícone de email"
+                                        srcset="https://redventures.com.br/icons/linkedin.svg 1x, https://redventures.com.br/icons/linkedin.svg 2x"
+                                        src="https://redventures.com.br/icons/linkedin.svg" width="19" height="19" decoding="async"
+                                        data-nimg="future" loading="lazy" style="color:transparent"></div><span
+                                    class="content_contactText__tDBi9">linkedin.com/company/redventuresbrasil</span>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="hero_hero__YJxEN">
+            <div class="hero_content__uCdHN">
+                <div class="container_container__zL0Q7 undefined"><img alt="logotipo da Red Ventures"
+                        srcset="https://redventures.com.br/_next/image?url=%2Fhome-partners-logo.png&amp;w=96&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fhome-partners-logo.png&amp;w=256&amp;q=75 2x"
+                        src="https://redventures.com.br/_next/image?url=%2Fhome-partners-logo.png&amp;w=256&amp;q=75" width="82" height="82"
+                        decoding="async" data-nimg="future" class="hero_logo__F71vk" loading="lazy"
+                        style="color:transparent">
+                    <h1 class="hero_title__2kOfy">Unlock Your Company’s</h1>
+                    <h2 class="hero_subtitle__PUWHj">Growth Potential Faster</h2>
+                </div><button class="hero_downButton__Rj5_g"><img alt="Seta apontanto para baixo"
+                        srcset="https://redventures.com.br/icons/arrow-bold-red.svg 1x, https://redventures.com.br/icons/arrow-bold-red.svg 2x"
+                        src="https://redventures.com.br/icons/arrow-bold-red.svg" width="21" height="22" decoding="async" data-nimg="future"
+                        class="hero_downButton__icon__Xoi_x" loading="lazy" style="color:transparent"></button>
+            </div>
+            <div class="hero_footer__IwbHp">
+                <div class="hero_intro__FhGAv">
+                    <h3 class="hero_introTitle__5ELzL">O que fazemos</h3>
+                    <p class="hero_introSubtitle__PzIfF">Há 20 anos ajudamos grandes marcas do mundo a atrair e adquirir
+                        seus clientes de maior valor, melhorando todos os aspectos da jornada do usuário.</p><a
+                        class="button_button__iliVb button_primary__yZ1Jn hero_desktopBtn__UP9qt" href="https://redventures.com.br/o-que-fazemos">
+                        <!-- -->saiba mais</a>
+                </div>
+                <div class="hero_features__dc8ur">
+                    <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events hero_slider__hbDsR">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-active" style="width: 334px; margin-right: 123px;">
+                                <div class="card_card__sM1Z_">
+                                    <div class="card_header___r6gi">
+                                        <p class="card_number__E6H80 fillNumber">01</p>
+                                        <p class="card_title__bNjIy">Estratégia <br> de aquisição</p>
+                                    </div>
+                                    <p class="card_content__lUrhL">Desenhamos e executamos a estratégia mais eficiente
+                                        de escolha de canais de mídia e audiências para maximizar o retorno sobre o
+                                        investimento.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-next" style="width: 334px; margin-right: 123px;">
+                                <div class="card_card__sM1Z_">
+                                    <div class="card_header___r6gi">
+                                        <p class="card_number__E6H80">02</p>
+                                        <p class="card_title__bNjIy">Tecnologia proprietária</p>
+                                    </div>
+                                    <p class="card_content__lUrhL">Usamos nossa plataforma para criar experiências de
+                                        aquisição integradas com o produto core, facilmente personalizáveis para
+                                        segmentação e testes, resultando em fluxos de alta taxa de conversão de vendas.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" style="width: 334px; margin-right: 123px;">
+                                <div class="card_card__sM1Z_">
+                                    <div class="card_header___r6gi">
+                                        <p class="card_number__E6H80">03</p>
+                                        <p class="card_title__bNjIy">Análise de dados avançada</p>
+                                    </div>
+                                    <p class="card_content__lUrhL">Evoluímos constantemente nossa tecnologia de
+                                        ingestão, modelagem e visualização de dados para determinar o próximo melhor
+                                        investimento em mídia e desenvolvimento de produto.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide hero_lastSlide__rxqJl" style="width: 334px; margin-right: 123px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider_components_container__L05Uj hero_sliderControllers__FXM9X"><button
+                            aria-label="Anterior" class="slider_previous__wFX2p"></button><button aria-label="Próximo"
+                            class="slider_next__VrJZJ"></button>
+                        <div class="slider_scrollbar__8wcIh"><span style="width: 25%;"></span></div>
+                    </div>
+                </div><a class="button_button__iliVb button_primary__yZ1Jn hero_mobileBtn__3PC76"
+                    href="https://redventures.com.br/o-que-fazemos">saiba mais</a>
+            </div>
+        </section>
+        <section class="numbers_numbers__Cee9C">
+            <div class="numbers_contentClass__rbYHa">
+                <div class="item_item__BlRy3">
+                    <div class="item_iconWrapper__fsTUx"><img alt="page" srcset="https://redventures.com.br/icons/page.svg 1x, https://redventures.com.br/icons/page.svg 2x"
+                            src="https://redventures.com.br/icons/page.svg" width="32" height="32" decoding="async" data-nimg="future"
+                            loading="lazy" style="color:transparent"></div>
+                    <p class="item_titleClass__sEVMJ">+ <span id="page">0</span> </p>
+                    <p class="item_textClass__fFi9H">conteúdos publicados por ano</p>
+                </div>
+                <div class="item_item__BlRy3">
+                    <div class="item_iconWrapper__fsTUx"><img alt="graph"
+                            srcset="https://redventures.com.br/icons/graph.svg 1x, https://redventures.com.br/icons/graph.svg 2x" src="https://redventures.com.br/icons/graph.svg" width="32"
+                            height="32" decoding="async" data-nimg="future" loading="lazy" style="color:transparent">
+                    </div>
+                    <p class="item_titleClass__sEVMJ">+ <span id="graph">0</span> <!-- -->M</p>
+                    <p class="item_textClass__fFi9H">visitas aos sites de seus diferentes negócios/mês</p>
+                </div>
+                <div class="item_item__BlRy3">
+                    <div class="item_iconWrapper__fsTUx"><img alt="add-person"
+                            srcset="https://redventures.com.br/icons/add-person.svg 1x, https://redventures.com.br/icons/add-person.svg 2x" src="https://redventures.com.br/icons/add-person.svg"
+                            width="32" height="32" decoding="async" data-nimg="future" loading="lazy"
+                            style="color:transparent"></div>
+                    <p class="item_titleClass__sEVMJ">+ <span id="person">0</span> </p>
+                    <p class="item_textClass__fFi9H">colaboradores em 5 continentes</p>
+                </div>
+                <div class="item_item__BlRy3">
+                    <div class="item_iconWrapper__fsTUx"><img alt="laptop"
+                            srcset="https://redventures.com.br/icons/laptop.svg 1x, https://redventures.com.br/icons/laptop.svg 2x" src="https://redventures.com.br/icons/laptop.svg" width="32"
+                            height="32" decoding="async" data-nimg="future" loading="lazy" style="color:transparent">
+                    </div>
+                    <p class="item_titleClass__sEVMJ">+ <span id="laptop">0</span> </p>
+                    <p class="item_textClass__fFi9H">sites de notícias e informações</p>
+                </div>
+            </div>
+        </section>
+        <section id="partners" class="partners_partners__Eil27">
+            <h1 class="partners_title__SZ6p3">Quem já cresceu com a gente</h1>
+            <div id="buildings" class="partners_buildingsWrapper__7pc37"><img alt="Ilustração de prédios"
+                    id="buildingImage"
+                    srcset="https://redventures.com.br/_next/image?url=%2Fhome-partners-buildings.png&amp;w=1920&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fhome-partners-buildings.png&amp;w=3840&amp;q=75 2x"
+                    src="https://redventures.com.br/_next/image?url=%2Fhome-partners-buildings.png&amp;w=3840&amp;q=75" width="1920" height="604"
+                    decoding="async" data-nimg="future" class="partners_buildingsImage__gWJn1" loading="lazy"
+                    style="color:transparent">
+                <div class="partners_logoWrapper__rlNm6"><img alt="logotipo da Redventures entre os prédios"
+                        srcset="https://redventures.com.br/_next/image?url=%2Fhome-partners-logo.png&amp;w=256&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fhome-partners-logo.png&amp;w=640&amp;q=75 2x"
+                        src="https://redventures.com.br/_next/image?url=%2Fhome-partners-logo.png&amp;w=640&amp;q=75" width="200" height="200"
+                        decoding="async" data-nimg="future" loading="lazy" style="color:transparent"></div>
+            </div>
+            <div class="partners_list__e5WRF">
+                <div class=" marquee-container" style="--pause-on-hover:running; --pause-on-click:running;">
+                    <div class="marquee"
+                        style="--play:running; --direction:normal; --duration:71.525s; --delay:0s; --iteration-count:infinite;">
+                        <div class="partners_shelf__HWcK4">
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/itau.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fitau.png&amp;w=48&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fitau.png&amp;w=96&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fitau.png&amp;w=96&amp;q=75" width="40"
+                                    height="40" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/rede.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Frede.png&amp;w=96&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Frede.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Frede.png&amp;w=256&amp;q=75" width="77"
+                                    height="25" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/icarros.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Ficarros.png&amp;w=96&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Ficarros.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Ficarros.png&amp;w=256&amp;q=75" width="93"
+                                    height="30" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/iti.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fiti.png&amp;w=48&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fiti.png&amp;w=96&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fiti.png&amp;w=96&amp;q=75" width="44"
+                                    height="44" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/conectcar.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fconectcar.png&amp;w=128&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fconectcar.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fconectcar.png&amp;w=256&amp;q=75" width="118"
+                                    height="24" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/recovery.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Frecovery.png&amp;w=256&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Frecovery.png&amp;w=384&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Frecovery.png&amp;w=384&amp;q=75" width="149"
+                                    height="37" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/fibra.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Ffibra.png&amp;w=128&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Ffibra.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Ffibra.png&amp;w=256&amp;q=75" width="98"
+                                    height="32" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/bankrate.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fbankrate.png&amp;w=128&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fbankrate.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fbankrate.png&amp;w=256&amp;q=75" width="109"
+                                    height="21" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/xp.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fxp.png&amp;w=48&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fxp.png&amp;w=96&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fxp.png&amp;w=96&amp;q=75" width="39" height="34"
+                                    decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/rico.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Frico.png&amp;w=64&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Frico.png&amp;w=128&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Frico.png&amp;w=128&amp;q=75" width="58"
+                                    height="24" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/clear.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fclear.png&amp;w=128&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fclear.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fclear.png&amp;w=256&amp;q=75" width="106"
+                                    height="36" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/cogna.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fcogna.png&amp;w=96&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fcogna.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fcogna.png&amp;w=256&amp;q=75" width="93"
+                                    height="30" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/icatu.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Ficatu.png&amp;w=96&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Ficatu.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Ficatu.png&amp;w=256&amp;q=75" width="76"
+                                    height="27" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/tokestok.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Ftokestok.png&amp;w=256&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Ftokestok.png&amp;w=384&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Ftokestok.png&amp;w=384&amp;q=75" width="132"
+                                    height="19" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/uswitch.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fuswitch.png&amp;w=128&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fuswitch.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fuswitch.png&amp;w=256&amp;q=75" width="114"
+                                    height="34" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/slumber-yard.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fslumber-yard.png&amp;w=256&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fslumber-yard.png&amp;w=640&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fslumber-yard.png&amp;w=640&amp;q=75" width="219"
+                                    height="18" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                        </div>
+                    </div>
+                    <div class="marquee" aria-hidden="true"
+                        style="--play:running; --direction:normal; --duration:71.525s; --delay:0s; --iteration-count:infinite;">
+                        <div class="partners_shelf__HWcK4">
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/itau.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fitau.png&amp;w=48&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fitau.png&amp;w=96&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fitau.png&amp;w=96&amp;q=75" width="40"
+                                    height="40" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/rede.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Frede.png&amp;w=96&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Frede.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Frede.png&amp;w=256&amp;q=75" width="77"
+                                    height="25" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/icarros.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Ficarros.png&amp;w=96&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Ficarros.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Ficarros.png&amp;w=256&amp;q=75" width="93"
+                                    height="30" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/iti.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fiti.png&amp;w=48&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fiti.png&amp;w=96&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fiti.png&amp;w=96&amp;q=75" width="44"
+                                    height="44" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/conectcar.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fconectcar.png&amp;w=128&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fconectcar.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fconectcar.png&amp;w=256&amp;q=75" width="118"
+                                    height="24" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/recovery.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Frecovery.png&amp;w=256&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Frecovery.png&amp;w=384&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Frecovery.png&amp;w=384&amp;q=75" width="149"
+                                    height="37" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/fibra.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Ffibra.png&amp;w=128&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Ffibra.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Ffibra.png&amp;w=256&amp;q=75" width="98"
+                                    height="32" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/bankrate.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fbankrate.png&amp;w=128&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fbankrate.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fbankrate.png&amp;w=256&amp;q=75" width="109"
+                                    height="21" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/xp.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fxp.png&amp;w=48&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fxp.png&amp;w=96&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fxp.png&amp;w=96&amp;q=75" width="39" height="34"
+                                    decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/rico.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Frico.png&amp;w=64&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Frico.png&amp;w=128&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Frico.png&amp;w=128&amp;q=75" width="58"
+                                    height="24" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/clear.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fclear.png&amp;w=128&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fclear.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fclear.png&amp;w=256&amp;q=75" width="106"
+                                    height="36" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/cogna.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fcogna.png&amp;w=96&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fcogna.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fcogna.png&amp;w=256&amp;q=75" width="93"
+                                    height="30" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/icatu.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Ficatu.png&amp;w=96&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Ficatu.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Ficatu.png&amp;w=256&amp;q=75" width="76"
+                                    height="27" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/tokestok.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Ftokestok.png&amp;w=256&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Ftokestok.png&amp;w=384&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Ftokestok.png&amp;w=384&amp;q=75" width="132"
+                                    height="19" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/uswitch.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fuswitch.png&amp;w=128&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fuswitch.png&amp;w=256&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fuswitch.png&amp;w=256&amp;q=75" width="114"
+                                    height="34" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                            <div class="partners_logoClass__zAdmY"><img alt="Logo da empres /partners/slumber-yard.png"
+                                    srcset="https://redventures.com.br/_next/image?url=%2Fpartners%2Fslumber-yard.png&amp;w=256&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fpartners%2Fslumber-yard.png&amp;w=640&amp;q=75 2x"
+                                    src="https://redventures.com.br/_next/image?url=%2Fpartners%2Fslumber-yard.png&amp;w=640&amp;q=75" width="219"
+                                    height="18" decoding="async" data-nimg="future" style="color: transparent;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <div style="text-align: center;">
+            <div style="display: inline-block;">
+                <p> - </p>
+                <p> Este é um micro-site criado somente para ilustrar o que seria o Tableau embedded no seu site. Somente alguns exemplos para inspira-los na avaliação do Tableau e para conhecermos melhor o seu use case</p> 
+                <p> Todos os dashboards apresentados contem dados ficticios para fins educacionais </p>   
+        <div id="vizContainer0"></div>
+        </div>
+        </div>
+        
+        <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard que acompanha despesas de recursos humanos. Voce pode encontrar esse dashboard nos Accelerators Tableau</p>
+            <p>Os aceleradores do Tableau são painéis pré-criados projetados para ajudar você a obter um impulso inicial na análise de dados.</p>
+            <p>Adaptados a setores específicos e aplicativos corporativos, os Aceleradores são criados com dados de amostra que você pode trocar por seus próprios dados,</p>
+                <p> permitindo que você descubra insights com configuração mínima.</p>   
+        <div id="vizContainer1"></div>
+        </div>
+        </div>
+        <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard que acompanha Real x Orçado de projetos e segue o conceito de guided analytics e você pode ir analisando e fazendo drill down</p>
+             
+        <div id="vizContainer2"></div>
+        </div>
+        </div>
+        <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard para ánalise de um demonstrativo financeiro. Também disponível nos Accelerators Tableau</p>
+            <p>Os aceleradores do Tableau são painéis pré-criados projetados para ajudar você a obter um impulso inicial na análise de dados.</p>
+            <p>Adaptados a setores específicos e aplicativos corporativos, os Aceleradores são criados com dados de amostra que você pode trocar por seus próprios dados,</p>
+                <p> permitindo que você descubra insights com configuração mínima.</p>   
+
+
+              
+
+
+
+
+
+        <div id="vizContainer3"></div>
+        </div>
+        </div>
+         <div style="text-align: center;">
+        <div style="display: inline-block;">
+          
+        <p>-</p>
+        <p> Abaixo um exemplo de mapas usando buffer calculation, onde avalia num raio de 0.5 milhas quantos supermercados atendem determinados lotes</p>
+        <div id="vizContainer4"></div>
+        </div>
+        </div>
+        <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard usando uma extensão para mostrar uma planta interna de shopping/aeroporto. Clique na barra de revenue para ver a localização da loja</p>
+              
+        <div id="vizContainer5"></div>
+        </div>
+        </div> 
+        <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard mais lúdico disponível no Tableau Public. Voce pode acompanhar a animação clicando no triangulo no canto inferior direito</p>
+            <p>O Tableau Public é uma plataforma gratuita para explorar, criar e compartilhar publicamente visualizações de dados online. </p>
+                <p> Com o maior repositório de visualizações de dados do mundo para aprender, o Tableau Public facilita o desenvolvimento de habilidades de dados.</p>
+            
+        <div id="vizContainer6"></div>
+        </div>
+        </div>
+        <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard para ánalise Google Ads. Também disponível nos Accelerators Tableau</p>
+            <p>Avalie e melhore o desempenho de suas campanhas de marketing com o Google Ads</p>
+            <p>Concentre-se nos esforços nas palavras-chave mais eficientes</p>
+                <p> Audite os resultados da otimização da campanha ao longo do tempo</p>   
+        <div id="vizContainer7"></div>
+        </div>
+        </div>
+        <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard para ánalise do Twitter Ads. Também disponível nos Accelerators Tableau</p>
+            <p>Avalie e melhore o desempenho de suas campanhas de marketing com o Twitter Ads</p>
+            <p>Mergulhe fundo na eficiência da campanha em: Reconhecimento, Engajamento, Conversão</p>
+                <p> Audite os resultados da otimização da campanha ao longo do tempo e Melhorar o retorno sobre o investimento</p>     
+        <div id="vizContainer8"></div>
+        </div>
+        </div>
+        <div style="text-align: center;">
+        <div style="display: inline-block;">
+        
+            <p> - </p>
+            <p> Abaixo um dashboard para ánalise de facebook ads. Também disponível nos Accelerators Tableau</p>
+            <p>Avalie e melhore o desempenho de suas campanhas de marketing com o Facebook Ads.
+                Identifique as campanhas mais impactantes.
+                Mergulhe fundo na eficiência da campanha em: Reconhecimento, Engajamento, Conversão.</p>
+            <p>Melhorar o retorno sobre o investimento.
+                Audite os resultados da otimização da campanha ao longo do tempo.</p>   
+        <div id="vizContainer9"></div>
+        </div>
+        </div>
+        <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard para acompanhamento de NPS. Também disponível nos Accelerators Tableau</p>
+            <p>Entenda como os clientes avaliam suas experiências com sua empresa</p>
+            <p>Como a qualidade da experiência de seus clientes evoluiu ao longo do tempo</p>   
+        <div id="vizContainer10"></div>
+        </div>
+        </div>
+      
+        <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p>-</p>
+            <p> O dashboard a seguir é um exemplo de webinar que utilizamos no inicio da jornada para criação de cultura de dados. </p>
+                <p>Tem muita informação relevante para que voce possa conhecer um pouco mais sobre a plataforma Tableau e como te ajudamos a construir cultura de dados/>
+                <p>-</p>
+        <div id="vizContainer11"></div>
+        </div>
+        </div>
+        <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p>-</p>
+            <p> O dashboard a seguir é um exemplo de webinar sobre embedded. </p>
+                <p>Tem muita informação relevante para que voce possa conhecer um pouco mais sobre embedded</p>
+                <p>-</p>
+        <div id="vizContainer12"></div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <section id="aboutus" class="aboutus_aboutus__hSu9Q">
+            <div class="container_container__zL0Q7 aboutus_aboutusContainer__biBrf">
+                <div class="aboutus_content__jp9FR"><img alt="Avião de papel passando sobre logotipo da Red Ventures"
+                        srcset="https://redventures.com.br/_next/image?url=%2Fhome-aboutus-background.png&amp;w=1920&amp;q=100 1x, https://redventures.com.br/_next/image?url=%2Fhome-aboutus-background.png&amp;w=3840&amp;q=100 2x"
+                        src="https://redventures.com.br/_next/image?url=%2Fhome-aboutus-background.png&amp;w=3840&amp;q=100" width="1874"
+                        height="853" decoding="async" data-nimg="future" class="aboutus_background__wky_Y"
+                        loading="lazy" style="color:transparent"><img alt="Avião de papel" id="imageBackground"
+                        srcset="https://redventures.com.br/_next/image?url=%2Fairplane.png&amp;w=640&amp;q=75 1x, https://redventures.com.br/_next/image?url=%2Fairplane.png&amp;w=1080&amp;q=75 2x"
+                        src="https://redventures.com.br/_next/image?url=%2Fairplane.png&amp;w=1080&amp;q=75" width="435" height="418"
+                        decoding="async" data-nimg="future" class="aboutus_airplane__0UvVH airplane_animate"
+                        loading="lazy" style="color:transparent">
+                    <div id="dotscover" class="aboutus_dotsCover__Xzmxo dots_animate"></div>
+                    <div class="aboutus_texts__hKWJy">
+                        <h1 class="aboutus_title__XwY2c">Quem somos</h1>
+                        <p class="aboutus_description__aKCFI">Desde sua entrada no Brasil, a Red Ventures cria valor
+                            tanto em suas parcerias estratégicas, quanto na construção de negócios próprios.</p>
+                        <div class="aboutus_numbers__WK6s9">
+                            <p class="aboutus_number__M3U__">+20</p>
+                            <p class="aboutus_smallText__4Lh_Q">Anos de <br>experiência</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="companies_companies__1Ih4q">
+            <div class="companies_propertiesClass__UEzwg">
+                <p class="companies_propertiesTitle___k53R">Marcas proprietárias</p>
+                <div class="companies_carousel__HLpJ8">
+                    <div
+                        class="swiper swiper-initialized swiper-horizontal swiper-pointer-events companies_slider__nMsOg swiper-backface-hidden">
+                        <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+                            <div class="swiper-slide companies_slide__LPKpZ swiper-slide-active"
+                                style="margin-right: 24px;">
+                                <div class="card_card__zQlIC">
+                                    <div class="card_content__L_yiN"><button aria-label="Abrir detalhes"
+                                            class="card_plus__TMaYc "></button>
+                                        <div class="card_logo__N3kKJ"><img alt="Logo da Onze"
+                                                srcset="https://redventures.com.br/logos/onze.svg 1x, https://redventures.com.br/logos/onze.svg 2x" src="https://redventures.com.br/logos/onze.svg"
+                                                width="111" height="30" decoding="async" data-nimg="future"
+                                                loading="lazy" style="color:transparent"></div>
+                                        <p class="card_text__vB3iv">Onze</p>
+                                    </div>
+                                    <div class="card_description__EMRpX ">
+                                        <div class="card_description_logo__fWF6l"><img alt="Logo da Onze"
+                                                srcset="https://redventures.com.br/logos/onze.svg 1x, https://redventures.com.br/logos/onze.svg 2x" src="https://redventures.com.br/logos/onze.svg"
+                                                width="82" height="22" decoding="async" data-nimg="future"
+                                                loading="lazy" style="color:transparent"></div>
+                                        <div class="card_description_topBlur__LX_Kg"></div>
+                                        <p class="card_description_text__E09T3">A RV Brazil fundou a Onze em 2020 com o
+                                            objetivo de ajudar milhões de brasileiros a economizar para o futuro com
+                                            mais eficiência. Desde então, nos tornamos um investimento compartilhado com
+                                            a Ribbit Capital e pretendemos crescer de um negócio B2B influente para uma
+                                            solução completa em bem-estar financeiro. Para nós, quanto mais gente com
+                                            estabilidade financeira melhor.</p>
+                                        <p class="card_description_propertyName__5P34w">Onze</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide companies_slide__LPKpZ swiper-slide-next"
+                                style="margin-right: 24px;">
+                                <div class="card_card__zQlIC">
+                                    <div class="card_content__L_yiN"><button aria-label="Abrir detalhes"
+                                            class="card_plus__TMaYc "></button>
+                                        <div class="card_logo__N3kKJ"><img alt="Logo do Iq"
+                                                srcset="https://redventures.com.br/logos/iq.svg 1x, https://redventures.com.br/logos/iq.svg 2x" src="https://redventures.com.br/logos/iq.svg"
+                                                width="48" height="68" decoding="async" data-nimg="future"
+                                                loading="lazy" style="color:transparent"></div>
+                                        <p class="card_text__vB3iv">iq</p>
+                                    </div>
+                                    <div class="card_description__EMRpX ">
+                                        <div class="card_description_logo__fWF6l"><img alt="Logo do Iq"
+                                                srcset="https://redventures.com.br/logos/iq.svg 1x, https://redventures.com.br/logos/iq.svg 2x" src="https://redventures.com.br/logos/iq.svg"
+                                                width="36" height="50" decoding="async" data-nimg="future"
+                                                loading="lazy" style="color:transparent"></div>
+                                        <div class="card_description_topBlur__LX_Kg"></div>
+                                        <p class="card_description_text__E09T3">A missão do iq se inspira na da Red
+                                            Ventures, buscando ajudar as pessoas a tomarem as melhores decisões,
+                                            especialmente para crédito. Começou como um marketplace de cartões de
+                                            crédito e atualmente o iq faz parte de uma joint-venture entre a Red
+                                            Ventures e a Boa Vista, onde as marcas iq, Acordo Certo e Consumidor
+                                            Positivo unem para formar um ecossistema completo de acesso a crédito e
+                                            melhoria de saúde financeira.</p>
+                                        <p class="card_description_propertyName__5P34w">iq</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide companies_slide__LPKpZ" style="margin-right: 24px;">
+                                <div class="card_card__zQlIC">
+                                    <div class="card_content__L_yiN"><button aria-label="Abrir detalhes"
+                                            class="card_plus__TMaYc "></button>
+                                        <div class="card_logo__N3kKJ"><img alt="Logo da Bankrate"
+                                                srcset="https://redventures.com.br/logos/bankrate.svg 1x, https://redventures.com.br/logos/bankrate.svg 2x"
+                                                src="https://redventures.com.br/logos/bankrate.svg" width="175" height="37" decoding="async"
+                                                data-nimg="future" loading="lazy" style="color:transparent"></div>
+                                        <p class="card_text__vB3iv">Bankrate</p>
+                                    </div>
+                                    <div class="card_description__EMRpX ">
+                                        <div class="card_description_logo__fWF6l"><img alt="Logo da Bankrate"
+                                                srcset="https://redventures.com.br/logos/bankrate.svg 1x, https://redventures.com.br/logos/bankrate.svg 2x"
+                                                src="https://redventures.com.br/logos/bankrate.svg" width="104" height="22" decoding="async"
+                                                data-nimg="future" loading="lazy" style="color:transparent"></div>
+                                        <div class="card_description_topBlur__LX_Kg"></div>
+                                        <p class="card_description_text__E09T3">A Bankrate foi adquirida pela Red
+                                            Ventures em 2017 e oferece mais de 200 calculadoras financeiras para
+                                            ajudá-lo a estimar facilmente seus pagamentos mensais de hipoteca, gerenciar
+                                            seu orçamento mensal, criar um plano de aposentadoria e muito mais. Você
+                                            pode conectar seu banco, cartão de crédito e contas de empréstimo para
+                                            monitorar todas as suas economias e dívidas em um só local.</p>
+                                        <p class="card_description_propertyName__5P34w">Bankrate</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide companies_slide__LPKpZ" style="margin-right: 24px;">
+                                <div class="card_card__zQlIC">
+                                    <div class="card_content__L_yiN"><button aria-label="Abrir detalhes"
+                                            class="card_plus__TMaYc "></button>
+                                        <div class="card_logo__N3kKJ"><img alt="Logo da Best Colleges"
+                                                srcset="https://redventures.com.br/logos/bestcolleges.svg 1x, https://redventures.com.br/logos/bestcolleges.svg 2x"
+                                                src="https://redventures.com.br/logos/bestcolleges.svg" width="136" height="50" decoding="async"
+                                                data-nimg="future" loading="lazy" style="color:transparent"></div>
+                                        <p class="card_text__vB3iv">Best Colleges</p>
+                                    </div>
+                                    <div class="card_description__EMRpX ">
+                                        <div class="card_description_logo__fWF6l"><img alt="Logo da Best Colleges"
+                                                srcset="https://redventures.com.br/logos/bestcolleges.svg 1x, https://redventures.com.br/logos/bestcolleges.svg 2x"
+                                                src="https://redventures.com.br/logos/bestcolleges.svg" width="110" height="40" decoding="async"
+                                                data-nimg="future" loading="lazy" style="color:transparent"></div>
+                                        <div class="card_description_topBlur__LX_Kg"></div>
+                                        <p class="card_description_text__E09T3">Em 2019, a Red Ventures entrou no setor
+                                            educacional ao adquirir a HigherEducation.com. Hoje, a RV Education inclui
+                                            mais de 50 sites premium, incluindo BestColleges.com, e o maior mercado
+                                            orgânico para educação nos EUA. Temos parceria com mais de 200 escolas para
+                                            oferecer aos alunos a opção de encontrar e comparar mais de 500 programas em
+                                            todos os tipos de graduação.</p>
+                                        <p class="card_description_propertyName__5P34w">Best Colleges</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide companies_slide__LPKpZ" style="margin-right: 24px;">
+                                <div class="card_card__zQlIC">
+                                    <div class="card_content__L_yiN"><button aria-label="Abrir detalhes"
+                                            class="card_plus__TMaYc "></button>
+                                        <div class="card_logo__N3kKJ"><img alt="Logo da Lonely Planet"
+                                                srcset="https://redventures.com.br/logos/lonelyplanet.svg 1x, https://redventures.com.br/logos/lonelyplanet.svg 2x"
+                                                src="https://redventures.com.br/logos/lonelyplanet.svg" width="266" height="37" decoding="async"
+                                                data-nimg="future" loading="lazy" style="color:transparent"></div>
+                                        <p class="card_text__vB3iv">Lonely Planet</p>
+                                    </div>
+                                    <div class="card_description__EMRpX ">
+                                        <div class="card_description_logo__fWF6l"><img alt="Logo da Lonely Planet"
+                                                srcset="https://redventures.com.br/logos/lonelyplanet.svg 1x, https://redventures.com.br/logos/lonelyplanet.svg 2x"
+                                                src="https://redventures.com.br/logos/lonelyplanet.svg" width="158" height="22" decoding="async"
+                                                data-nimg="future" loading="lazy" style="color:transparent"></div>
+                                        <div class="card_description_topBlur__LX_Kg"></div>
+                                        <p class="card_description_text__E09T3">Em 2020, a Lonely Planet foi adquirida
+                                            pela Red Ventures.Desde então, temos trabalhado arduamente para atender às
+                                            necessidades dos viajantes enquanto eles se reencontram com o mundo on-line
+                                            e por meio de nossos livros icônicos - ajudando mais pessoas a descobrir e
+                                            decidir para onde irão, como chegarão lá e o que fazer quando eles chegarem.
+                                        </p>
+                                        <p class="card_description_propertyName__5P34w">Lonely Planet</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide companies_slide__LPKpZ" style="margin-right: 24px;">
+                                <div class="card_card__zQlIC">
+                                    <div class="card_content__L_yiN"><button aria-label="Abrir detalhes"
+                                            class="card_plus__TMaYc "></button>
+                                        <div class="card_logo__N3kKJ"><img alt="Logo da The Point Guy"
+                                                srcset="https://redventures.com.br/logos/thepointguy.svg 1x, https://redventures.com.br/logos/thepointguy.svg 2x"
+                                                src="https://redventures.com.br/logos/thepointguy.svg" width="115" height="90" decoding="async"
+                                                data-nimg="future" loading="lazy" style="color:transparent"></div>
+                                        <p class="card_text__vB3iv">The Points Guy</p>
+                                    </div>
+                                    <div class="card_description__EMRpX ">
+                                        <div class="card_description_logo__fWF6l"><img alt="Logo da The Point Guy"
+                                                srcset="https://redventures.com.br/logos/thepointguy.svg 1x, https://redventures.com.br/logos/thepointguy.svg 2x"
+                                                src="https://redventures.com.br/logos/thepointguy.svg" width="60" height="50" decoding="async"
+                                                data-nimg="future" loading="lazy" style="color:transparent"></div>
+                                        <div class="card_description_topBlur__LX_Kg"></div>
+                                        <p class="card_description_text__E09T3">O TPG é um site líder em viagens e
+                                            estilo de vida com uma equipe de especialistas dedicada a ajudar as pessoas
+                                            a maximizar suas próprias viagens com pontos e milhas. Desde que ingressou
+                                            na RV em 2017, construímos uma marca confiável de viagens e estilo de vida.
+                                            O aplicativo TPG combina pontos e rastreamento de milhas com reserva de
+                                            viagens, e contextualiza de forma personalizada.</p>
+                                        <p class="card_description_propertyName__5P34w">The Points Guy</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide companies_slide__LPKpZ" style="margin-right: 24px;">
+                                <div class="card_card__zQlIC">
+                                    <div class="card_content__L_yiN"><button aria-label="Abrir detalhes"
+                                            class="card_plus__TMaYc "></button>
+                                        <div class="card_logo__N3kKJ"><img alt="Logo da Slumber yard"
+                                                srcset="https://redventures.com.br/logos/slumberyard.svg 1x, https://redventures.com.br/logos/slumberyard.svg 2x"
+                                                src="https://redventures.com.br/logos/slumberyard.svg" width="230" height="50" decoding="async"
+                                                data-nimg="future" loading="lazy" style="color:transparent"></div>
+                                        <p class="card_text__vB3iv">Slumber Yard</p>
+                                    </div>
+                                    <div class="card_description__EMRpX ">
+                                        <div class="card_description_logo__fWF6l"><img alt="Logo da Slumber yard"
+                                                srcset="https://redventures.com.br/logos/slumberyard.svg 1x, https://redventures.com.br/logos/slumberyard.svg 2x"
+                                                src="https://redventures.com.br/logos/slumberyard.svg" width="147" height="32" decoding="async"
+                                                data-nimg="future" loading="lazy" style="color:transparent"></div>
+                                        <div class="card_description_topBlur__LX_Kg"></div>
+                                        <p class="card_description_text__E09T3">A Slumber Yard ajuda as pessoas a
+                                            navegar no processo de compra de colchões, compartilhando experiência de
+                                            maneira divertida e fácil de entender. Com os recursos de marketing digital,
+                                            tecnologia e ciência de dados da Red Ventures, conseguiu se nos tornar uma
+                                            potência oferecendo ofertas mais exclusivas para os usuários e
+                                            recomendações, tornando-nos o site de avaliações de colchões número um na
+                                            web.</p>
+                                        <p class="card_description_propertyName__5P34w">Slumber Yard</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide companies_slide__LPKpZ" style="margin-right: 24px;">
+                                <div class="card_card__zQlIC">
+                                    <div class="card_content__L_yiN"><button aria-label="Abrir detalhes"
+                                            class="card_plus__TMaYc "></button>
+                                        <div class="card_logo__N3kKJ"><img alt="Logo da Healthline"
+                                                srcset="https://redventures.com.br/logos/healthline.svg 1x, https://redventures.com.br/logos/healthline.svg 2x"
+                                                src="https://redventures.com.br/logos/healthline.svg" width="219" height="34" decoding="async"
+                                                data-nimg="future" loading="lazy" style="color:transparent"></div>
+                                        <p class="card_text__vB3iv">Healthline</p>
+                                    </div>
+                                    <div class="card_description__EMRpX ">
+                                        <div class="card_description_logo__fWF6l"><img alt="Logo da Healthline"
+                                                srcset="https://redventures.com.br/logos/healthline.svg 1x, https://redventures.com.br/logos/healthline.svg 2x"
+                                                src="https://redventures.com.br/logos/healthline.svg" width="155" height="24" decoding="async"
+                                                data-nimg="future" loading="lazy" style="color:transparent"></div>
+                                        <div class="card_description_topBlur__LX_Kg"></div>
+                                        <p class="card_description_text__E09T3">A Healthline faz parte da RVO Health que
+                                            é uma joint venture entre a Red Ventures e a Optum Health do UnitedHealth
+                                            Group, lançada em 2022. Atualmente a Healthline é a maior editora de saúde
+                                            nos EUA, fornecendo a centenas de milhões de leitores mensais a clareza de
+                                            que precisam para tomar ações saudáveis.</p>
+                                        <p class="card_description_propertyName__5P34w">Healthline</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide companies_lastSlide__RmYHk" style="margin-right: 24px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="companies_components__AXApE">
+                    <div class="slider_components_container__L05Uj undefined"><button aria-label="Anterior"
+                            class="slider_previous__wFX2p"></button><button aria-label="Próximo"
+                            class="slider_next__VrJZJ"></button>
+                        <div class="slider_scrollbar__8wcIh"><span style="width: 11.1111%;"></span></div>
+                    </div><a class="button_button__iliVb button_primary__yZ1Jn companies_knowmore__vCj5z"
+                        href="https://redventures.com.br/quem-somos">saiba mais</a>
+                </div>
+            </div>
+        </section>
+        <section class="form_contact__Z_XNV">
+            <div class="form_section__DqyRE">
+                <div class="form_text__fF_Eh">
+                    <h2 class="form_title__K3v5H">Contato</h2>
+                    <p class="form_subtitle__dQux_">Fale com o nosso time e vamos entender mais sobre o seu negócio.</p>
+                </div>
+                <div class="form_content__8yRl1">
+                    <form>
+                        <div class="input_input__Cv3Kp"><label for="name" class="false input_labelClass__obasb
+}"> <!-- -->nome<!-- --> </label><input id="name" class="input_field__TJPL2" name="name"
+                                style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                        </div>
+                        <div class="input_input__Cv3Kp"><label for="email" class="false input_labelClass__obasb
+}"> <!-- -->e-mail<!-- --> </label><input id="email" class="input_field__TJPL2" type="mail" name="email"></div>
+                        <div class="input_input__Cv3Kp"><label for="phone" class="false input_labelClass__obasb
+}"> <!-- -->telefone<!-- --> </label><input id="phone" class="input_field__TJPL2" type="tel" name="phone"></div>
+                        <button class="button_button__iliVb button_primary__yZ1Jn undefined">enviar</button>
+                        <div class="form_feedback__FvVJ5 "><img alt="Ícone de avião de papel"
+                                srcset="https://redventures.com.br/icons/paper-plane.svg 1x, https://redventures.com.br/icons/paper-plane.svg 2x"
+                                src="https://redventures.com.br/icons/paper-plane.svg" width="32" height="32" decoding="async" data-nimg="future"
+                                loading="lazy" style="color:transparent">
+                            <h2 class="form_feedbackTitle__JvYOK">Enviado com sucesso!</h2>
+                            <p class="form_feedbackMessage__HhiiT">Entraremos em contato em breve.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer class="footer_footer__9_ZB2">
+            <div class="footer_content__jdgyq">
+                <nav>
+                    <ul class="footer_list__ia1Kq">
+                        <li class="footer_list_link__QWbrm"><a href="https://redventures.com.br/quem-somos">Quem somos</a></li>
+                        <li class="footer_list_link__QWbrm"><a href="https://redventures.com.br/o-que-fazemos">O que fazemos</a></li>
+                        <li class="footer_list_link__QWbrm"><a href="https://redventures.com.br/carreira">Carreira</a></li>
+                    </ul>
+                </nav>
+                <div><a class="footer_link___dy5W" href="mailto:contato@redventures.com">
+                        <div class="footer_icon__vsGNp"><img alt="Ícone de um envelope"
+                                srcset="https://redventures.com.br/icons/mail.svg 1x, https://redventures.com.br/icons/mail.svg 2x" src="https://redventures.com.br/icons/mail.svg" width="19"
+                                height="19" decoding="async" data-nimg="future" loading="lazy"
+                                style="color:transparent"></div>contato@redventures.com
+                    </a><a class="footer_link___dy5W"
+                        href="https://www.linkedin.com/company/redventuresbrasil/mycompany/" target="_blank"
+                        rel="noreferrer">
+                        <div class="footer_icon__vsGNp"><img alt="Ícone do linkedin"
+                                srcset="https://redventures.com.br/icons/linkedin.svg 1x, https://redventures.com.br/icons/linkedin.svg 2x" src="https://redventures.com.br/icons/linkedin.svg"
+                                width="19" height="19" decoding="async" data-nimg="future" loading="lazy"
+                                style="color:transparent"></div>linkedin.com/company/redventuresbrasil
+                    </a></div><img alt="Red Ventures Logo" srcset="https://redventures.com.br/full-logo.svg 1x, https://redventures.com.br/full-logo.svg 2x"
+                    src="https://redventures.com.br/full-logo.svg" width="250" height="34" decoding="async" data-nimg="future"
+                    class="footer_logo__DvjDN" loading="lazy" style="color:transparent">
+            </div>
+            <div class="footer_content__jdgyq"><a class="footer_text__CXmpU"
+                    href="https://www.google.com/maps/place/ED.+Olimp%C3%ADadas+-+R.+Olimp%C3%ADadas,+242+-+7%C2%BA+andar+-+Itaim+Bibi,+S%C3%A3o+Paulo+-+SP,+04551-000/@-23.5954022,-46.6879141,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce5748b9df229f:0x16f5ca2157551cbb!8m2!3d-23.5954022!4d-46.6857254"
+                    target="_blank" rel="noreferrer">Rua Olimpíadas, 242, 4º andar - Vila Olímpia | São Paulo - São
+                    Paulo</a>
+                <div class="footer_divider__bfoIh"></div>
+                <p class="footer_text__CXmpU">© 2023 Red Ventures Brasil</p>
+                <div class="footer_divider__bfoIh"></div><a class="footer_text__CXmpU"
+                    href="https://redventures.com.br/politica-de-privacidade">Política de Privacidade</a>
+            </div>
+        </footer>
+    </div>
+    <script id="__NEXT_DATA__"
+        type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"J6Evqn90ZxN4F8j2yq_xX","runtimeConfig":{},"nextExport":true,"autoExport":true,"isFallback":false,"locale":"pt-br","locales":["pt-br"],"defaultLocale":"pt-br","scriptLoader":[]}</script>
+    <next-route-announcer>
+        <p aria-live="assertive" id="__next-route-announcer__" role="alert"
+            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;">
+        </p>
+    </next-route-announcer>
+    <script src="https://redventures.com.br/_next/static/chunks/pages/carreira-5ca74df36cef284a.js"></script>
+    <script src="https://redventures.com.br/_next/static/chunks/pages/quem-somos-ceb42b675b6c65ae.js"></script>
+    <script src="https://redventures.com.br/_next/static/chunks/pages/o-que-fazemos-03039e634292d771.js"></script>
+    <script src="https://redventures.com.br/_next/static/chunks/pages/politica-de-privacidade-d9504a50db63e47b.js"></script>
+</body>
+
+</html>
